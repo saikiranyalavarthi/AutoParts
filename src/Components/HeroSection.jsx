@@ -5,7 +5,7 @@ const images = ["/Heroimages/Hero1.jpg", "/Heroimages/Hero2.jpg"];
 const HeroSection = () => {
   const [currentImage, setCurrentImage] = useState(0);
 
-  // Auto-slide images
+  // Auto-slide images every 4 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length);
@@ -38,7 +38,7 @@ const HeroSection = () => {
               }`}
             />
           ))}
-          <div className="absolute left-6 top-6 text-white max-w-xs animate-fadeIn">
+          <div className="absolute left-6 top-6 text-white max-w-xs">
             <h2 className="text-3xl md:text-4xl font-extrabold leading-tight drop-shadow-lg">
               OEM Auto Parts <br /> for Sale
             </h2>
@@ -56,63 +56,27 @@ const HeroSection = () => {
               FIND MY PART NOW
             </h3>
             <form className="space-y-5">
-              <div className="relative">
-                <select
-                  id="year"
-                  className="peer w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
-                >
-                  <option value="">Select Year</option>
-                  {yearOptions}
-                </select>
-                <label
-                  htmlFor="year"
-                  className="absolute left-3 -top-3.5 text-gray-500 text-sm bg-white px-1 transition-all peer-focus:-top-3.5 peer-focus:text-blue-600 peer-focus:text-sm"
-                >
-                  Year
-                </label>
-              </div>
-              <div className="relative">
-                <select
-                  id="make"
-                  className="peer w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
-                >
-                  <option value="">Select Make</option>
-                </select>
-                <label
-                  htmlFor="make"
-                  className="absolute left-3 -top-3.5 text-gray-500 text-sm bg-white px-1 transition-all peer-focus:-top-3.5 peer-focus:text-blue-600 peer-focus:text-sm"
-                >
-                  Make
-                </label>
-              </div>
-              <div className="relative">
-                <select
-                  id="model"
-                  className="peer w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
-                >
-                  <option value="">Select Model</option>
-                </select>
-                <label
-                  htmlFor="model"
-                  className="absolute left-3 -top-3.5 text-gray-500 text-sm bg-white px-1 transition-all peer-focus:-top-3.5 peer-focus:text-blue-600 peer-focus:text-sm"
-                >
-                  Model
-                </label>
-              </div>
-              <div className="relative">
-                <select
-                  id="part"
-                  className="peer w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
-                >
-                  <option value="">Select Part</option>
-                </select>
-                <label
-                  htmlFor="part"
-                  className="absolute left-3 -top-3.5 text-gray-500 text-sm bg-white px-1 transition-all peer-focus:-top-3.5 peer-focus:text-blue-600 peer-focus:text-sm"
-                >
-                  Part
-                </label>
-              </div>
+              {["year", "make", "model", "part"].map((field) => (
+                <div className="relative" key={field}>
+                  <select
+                    id={field}
+                    className="peer w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  >
+                    <option value="">
+                      {`Select ${
+                        field.charAt(0).toUpperCase() + field.slice(1)
+                      }`}
+                    </option>
+                    {field === "year" && yearOptions}
+                  </select>
+                  <label
+                    htmlFor={field}
+                    className="absolute left-3 -top-3.5 text-gray-500 text-sm bg-white px-1 transition-all peer-focus:-top-3.5 peer-focus:text-blue-600 peer-focus:text-sm"
+                  >
+                    {field.charAt(0).toUpperCase() + field.slice(1)}
+                  </label>
+                </div>
+              ))}
               <button className="w-full bg-yellow-400 hover:bg-yellow-500 transition text-black font-semibold py-2 rounded mt-2 hover:scale-105 transform">
                 FIND MY PART
               </button>

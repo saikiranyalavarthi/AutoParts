@@ -19,13 +19,22 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
-          <a href="#" className="text-gray-800 font-medium hover:text-teal-600">
+          <a
+            href="/engines"
+            className="text-gray-800 font-medium hover:text-teal-600"
+          >
             ENGINES
           </a>
-          <a href="#" className="text-gray-800 font-medium hover:text-teal-600">
+          <a
+            href="/Transmisson"
+            className="text-gray-800 font-medium hover:text-teal-600"
+          >
             TRANSMISSIONS
           </a>
-          <a href="#" className="text-gray-800 font-medium hover:text-teal-600">
+          <a
+            href="/PartsList"
+            className="text-gray-800 font-medium hover:text-teal-600"
+          >
             PARTS LIST
           </a>
           <a href="#" className="text-gray-800 font-medium hover:text-teal-600">
@@ -67,19 +76,19 @@ export default function Navbar() {
         <div className="md:hidden bg-white border-t shadow-md">
           <div className="flex flex-col space-y-3 px-4 py-4">
             <a
-              href="#"
+              href="/engines"
               className="text-gray-800 font-medium hover:text-teal-600"
             >
               ENGINES
             </a>
             <a
-              href="#"
+              href="/Transmisson"
               className="text-gray-800 font-medium hover:text-teal-600"
             >
               TRANSMISSIONS
             </a>
             <a
-              href="#"
+              href="/PartsList"
               className="text-gray-800 font-medium hover:text-teal-600"
             >
               PARTS LIST
