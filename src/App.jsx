@@ -12,6 +12,9 @@ import BlogSection from "./Components/BlogSection";
 import Engines from "./Pages/Engines";
 import Transmisson from "./Pages/Transmisson";
 import PartsList from "./Pages/PartsList";
+import Policies from "./Pages/Policies";
+import TestimonialsSection from "./Pages/TestimonialsSection";
+import AboutSection from "./Pages/AboutSection";
 
 // Import your new Engines page
 
@@ -40,6 +43,11 @@ const App = () => {
         <Route path="/engines" element={<Engines />} />
         <Route path="/Transmisson" element={<Transmisson />} />
         <Route path="/PartsList" element={<PartsList />} />
+
+        {/* Resources Page */}
+        <Route path="/policies" element={<Policies />} />
+        <Route path="/testimonials" element={<TestimonialsSection />} />
+        <Route path="/about" element={<AboutSection />} />
       </Routes>
       <FooterSection />
     </Router>

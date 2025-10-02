@@ -1,20 +1,28 @@
 import React, { useState } from "react";
-import { ShoppingCart, Phone, Menu, X } from "lucide-react";
+import { ShoppingCart, Phone, Menu, X, ChevronDown } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+
+  const resourcesLinks = [
+    { name: "Policies and T&C", href: "/policies" },
+    { name: "Make a Payment", href: "/payment" },
+    { name: "Find My", href: "/findmy" },
+    { name: "Track my Order", href: "/track" },
+    { name: "Submit a Ticket", href: "/ticket" },
+    { name: "Testimonials", href: "/testimonials" },
+    { name: "About Us", href: "/about" },
+  ];
 
   return (
-    <nav className="w-full shadow-md bg-white">
+    <nav className="w-full shadow-md bg-white relative">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
         {/* Logo */}
         <div className="flex items-center">
-          {/* <img
-            src="/logo.png" // replace with your logo path
-            alt="Logo"
-            className="h-10 w-auto"
-          /> */}
-          <h1 className=" font-medium">Auto Parts</h1>
+          <a href="/">
+            <h1 className="font-medium">Auto Parts</h1>
+          </a>
         </div>
 
         {/* Desktop Menu */}
@@ -37,9 +45,33 @@ export default function Navbar() {
           >
             PARTS LIST
           </a>
-          <a href="#" className="text-gray-800 font-medium hover:text-teal-600">
-            RESOURCES
-          </a>
+
+          {/* Resources Dropdown */}
+          <div className="relative group">
+            <button
+              onClick={() => setIsResourcesOpen(!isResourcesOpen)}
+              className="flex items-center text-gray-800 font-medium hover:text-teal-600"
+            >
+              RESOURCES <ChevronDown className="w-4 h-4 ml-1" />
+            </button>
+            {isResourcesOpen && (
+              <div className="absolute left-0 mt-2 w-56 bg-white border rounded-md shadow-lg z-50">
+                <ul className="py-2">
+                  {resourcesLinks.map((link, idx) => (
+                    <li key={idx}>
+                      <a
+                        href={link.href}
+                        className="block px-4 py-2 text-gray-700 hover:bg-teal-50 hover:text-teal-600"
+                      >
+                        {link.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+
           <a href="#" className="text-gray-800 font-medium hover:text-teal-600">
             FINANCING
           </a>
@@ -93,12 +125,26 @@ export default function Navbar() {
             >
               PARTS LIST
             </a>
-            <a
-              href="#"
-              className="text-gray-800 font-medium hover:text-teal-600"
-            >
-              RESOURCES
-            </a>
+
+            {/* Mobile Resources Dropdown */}
+            <details className="group">
+              <summary className="flex items-center justify-between cursor-pointer text-gray-800 font-medium hover:text-teal-600">
+                RESOURCES
+              </summary>
+              <ul className="mt-2 pl-4 space-y-2">
+                {resourcesLinks.map((link, idx) => (
+                  <li key={idx}>
+                    <a
+                      href={link.href}
+                      className="block text-gray-700 hover:text-teal-600"
+                    >
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </details>
+
             <a
               href="#"
               className="text-gray-800 font-medium hover:text-teal-600"
