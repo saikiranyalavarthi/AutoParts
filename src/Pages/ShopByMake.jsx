@@ -20,7 +20,7 @@ import {
   SiLandrover,
   SiCadillac,
 } from "react-icons/si";
-import WhyChooseUs from "../Components/WhyChooseUs";
+
 
 // Array of colors
 const colors = [
@@ -114,7 +114,7 @@ const ShopByMake = () => {
           );
         })}
       </div>
-      <WhyChooseUs />
+  
     </div>
   );
 };

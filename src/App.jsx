@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom"; // no Router here
 import Navbar from "./Components/Navbar";
 import Features from "./Components/Features";
 import EngineCards from "./Components/EngineCards";
@@ -10,20 +10,17 @@ import PromoSection from "./Components/PromoSection";
 import HeroSection from "./Components/HeroSection";
 import BlogSection from "./Components/BlogSection";
 import Engines from "./Pages/Engines";
-import Transmisson from "./Pages/Transmisson";
+import Transmission from "./Pages/Transmission";
 import PartsList from "./Pages/PartsList";
 import Policies from "./Pages/Policies";
 import TestimonialsSection from "./Pages/TestimonialsSection";
 import AboutSection from "./Pages/AboutSection";
 
-// Import your new Engines page
-
 const App = () => {
   return (
-    <Router>
+    <>
       <Navbar />
       <Routes>
-        {/* Home Page */}
         <Route
           path="/"
           element={
@@ -38,19 +35,15 @@ const App = () => {
             </>
           }
         />
-
-        {/* Engines Page */}
         <Route path="/engines" element={<Engines />} />
-        <Route path="/Transmisson" element={<Transmisson />} />
+        <Route path="/transmission" element={<Transmission />} />
         <Route path="/PartsList" element={<PartsList />} />
-
-        {/* Resources Page */}
         <Route path="/policies" element={<Policies />} />
         <Route path="/testimonials" element={<TestimonialsSection />} />
         <Route path="/about" element={<AboutSection />} />
       </Routes>
       <FooterSection />
-    </Router>
+    </>
   );
 };
 

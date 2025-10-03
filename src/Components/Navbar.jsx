@@ -34,7 +34,7 @@ export default function Navbar() {
             ENGINES
           </a>
           <a
-            href="/Transmisson"
+            href="/Transmission"
             className="text-gray-800 font-medium hover:text-teal-600"
           >
             TRANSMISSIONS
@@ -114,7 +114,7 @@ export default function Navbar() {
               ENGINES
             </a>
             <a
-              href="/Transmisson"
+              href="/Transmission"
               className="text-gray-800 font-medium hover:text-teal-600"
             >
               TRANSMISSIONS

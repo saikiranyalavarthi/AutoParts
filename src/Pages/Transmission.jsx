@@ -2,7 +2,7 @@ import React from "react";
 import FindTransmissonSection from "./FindTransmissonSection";
 import WhyChooseUs from "../Components/WhyChooseUs";
 
-const Transmisson = () => {
+const Transmission  = () => {
   return (
     <div>
       <FindTransmissonSection />
@@ -11,4 +11,4 @@ const Transmisson = () => {
   );
 };
 
-export default Transmisson;
+export default Transmission ;
