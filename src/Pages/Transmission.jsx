@@ -2,7 +2,7 @@ import React from "react";
 import FindTransmissonSection from "./FindTransmissonSection";
 import WhyChooseUs from "../Components/WhyChooseUs";
 
-const Transmission  = () => {
+const Transmission = () => {
   return (
     <div>
       <FindTransmissonSection />

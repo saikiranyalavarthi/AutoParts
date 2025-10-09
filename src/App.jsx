@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom"; // no Router here
 import Navbar from "./Components/Navbar";
 import Features from "./Components/Features";
-import EngineCards from "./Components/EngineCards";
+// import EngineCards from "./Components/EngineCards";
 import PartsCards from "./Components/PartsCards";
 import FooterSection from "./Components/FooterSection";
 import Testimonials from "./Components/Testimonials";
@@ -15,6 +15,7 @@ import PartsList from "./Pages/PartsList";
 import Policies from "./Pages/Policies";
 import TestimonialsSection from "./Pages/TestimonialsSection";
 import AboutSection from "./Pages/AboutSection";
+import Contact from "./Pages/Contact";
 
 const App = () => {
   return (
@@ -28,7 +29,7 @@ const App = () => {
               <HeroSection />
               <Features />
               <PromoSection />
-              <EngineCards />
+              {/* <EngineCards /> */}
               <PartsCards />
               <Testimonials />
               <BlogSection />
@@ -41,6 +42,7 @@ const App = () => {
         <Route path="/policies" element={<Policies />} />
         <Route path="/testimonials" element={<TestimonialsSection />} />
         <Route path="/about" element={<AboutSection />} />
+        <Route path="/Contact" element={<Contact />} />
       </Routes>
       <FooterSection />
     </>

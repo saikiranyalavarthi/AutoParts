@@ -26,7 +26,7 @@ export default function Features() {
   ];
 
   return (
-    <section className="bg-gradient-to-r from-teal-700 via-teal-600 to-teal-500 py-8">
+    <section className="bg-[#002b5e] py-8 mt-4">
       <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row flex-wrap justify-between items-center gap-6">
         {features.map((feature, index) => (
           <div

@@ -21,7 +21,11 @@ export default function Navbar() {
         {/* Logo */}
         <div className="flex items-center">
           <a href="/">
-            <h1 className="font-medium">Auto Parts</h1>
+          <h1 className="font-medium text-2xl">
+  <span className="text-blue-500">Zentro</span>{" "}
+  <span className="text-black">Auto Parts</span>
+</h1>
+
           </a>
         </div>
 
@@ -72,27 +76,21 @@ export default function Navbar() {
             )}
           </div>
 
-          <a href="#" className="text-gray-800 font-medium hover:text-teal-600">
-            FINANCING
-          </a>
+         
         </div>
 
         {/* Right Section */}
         <div className="flex items-center space-x-4">
           <a
-            href="tel:7742250882"
+            href="/contact"
             className="hidden md:flex items-center bg-yellow-400 text-gray-900 font-semibold px-4 py-2 rounded-md hover:bg-yellow-500 transition"
           >
-            <Phone className="w-4 h-4 mr-2" />
-            (774) 225-0882
+            {/* <Phone className="w-4 h-4 mr-2" /> */}
+           Contact
           </a>
 
           {/* Cart */}
-          <div className="flex items-center cursor-pointer text-gray-800 hover:text-teal-600">
-            <ShoppingCart className="w-5 h-5 mr-1" />
-            <span className="hidden md:block">Cart</span>
-          </div>
-
+          
           {/* Mobile Menu Button */}
           <button
             className="md:hidden text-gray-800"
@@ -145,18 +143,13 @@ export default function Navbar() {
               </ul>
             </details>
 
+           
             <a
-              href="#"
-              className="text-gray-800 font-medium hover:text-teal-600"
-            >
-              FINANCING
-            </a>
-            <a
-              href="tel:7742250882"
+              href="/contact"
               className="flex items-center bg-yellow-400 text-gray-900 font-semibold px-4 py-2 rounded-md hover:bg-yellow-500 transition"
             >
-              <Phone className="w-4 h-4 mr-2" />
-              (774) 225-0882
+              {/* <Phone className="w-4 h-4 mr-2" /> */}
+     Contact
             </a>
           </div>
         </div>

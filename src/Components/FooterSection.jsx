@@ -3,22 +3,26 @@ import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 
 export default function FooterSection() {
   return (
-    <footer className="bg-teal-800 text-gray-200 py-12">
+    <footer className="bg-[#002b5e] text-gray-200 py-12">
       <div className="max-w-7xl mx-auto px-6 grid gap-8 sm:grid-cols-2 md:grid-cols-4">
         {/* Quick Links */}
         <div>
           <h3 className="text-xl font-semibold mb-4 text-white">Quick Links</h3>
           <ul className="space-y-2">
-            {["Home", "Find a Part", "Search by Make/Model", "Contact Us"].map(
-              (link, idx) => (
-                <li
-                  key={idx}
-                  className="hover:text-yellow-400 cursor-pointer transition-colors duration-200"
+            {[
+              { name: "Home", href: "/" },
+              
+              { name: "Contact Us", href: "/contact" },
+            ].map((link, idx) => (
+              <li key={idx}>
+                <a
+                  href={link.href}
+                  className="hover:text-yellow-400 transition-colors duration-200"
                 >
-                  {link}
-                </li>
-              )
-            )}
+                  {link.name}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -28,16 +32,20 @@ export default function FooterSection() {
             What We Sell
           </h3>
           <ul className="space-y-2">
-            {["Used Engines", "Used Transmissions", "OEM Used Auto Parts"].map(
-              (item, idx) => (
-                <li
-                  key={idx}
-                  className="hover:text-yellow-400 cursor-pointer transition-colors duration-200"
+            {[
+              { name: "Used Engines", href: "/parts/engines" },
+              { name: "Used Transmissions", href: "/parts/transmissions" },
+              { name: "OEM Used Auto Parts", href: "/parts/oem" },
+            ].map((item, idx) => (
+              <li key={idx}>
+                <a
+                  href={item.href}
+                  className="hover:text-yellow-400 transition-colors duration-200"
                 >
-                  {item}
-                </li>
-              )
-            )}
+                  {item.name}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -46,20 +54,22 @@ export default function FooterSection() {
           <h3 className="text-xl font-semibold mb-4 text-white">Resources</h3>
           <ul className="space-y-2">
             {[
-              "Policies and T&C",
-              "Track my Order",
-              "Make a Payment",
-              "Submit a Ticket",
-              "Financing",
-              "Testimonials",
-              "About",
-              "Blogs",
+              { name: "Policies and T&C", href: "/policies" },
+              { name: "Track my Order", href: "/track-order" },
+              { name: "Make a Payment", href: "/payment" },
+              { name: "Submit a Ticket", href: "/support" },
+             
+              { name: "Testimonials", href: "/testimonials" },
+              { name: "About", href: "/about" },
+              { name: "Blogs", href: "/blogs" },
             ].map((res, idx) => (
-              <li
-                key={idx}
-                className="hover:text-yellow-400 cursor-pointer transition-colors duration-200"
-              >
-                {res}
+              <li key={idx}>
+                <a
+                  href={res.href}
+                  className="hover:text-yellow-400 transition-colors duration-200"
+                >
+                  {res.name}
+                </a>
               </li>
             ))}
           </ul>
@@ -70,18 +80,44 @@ export default function FooterSection() {
           <h3 className="text-xl font-semibold mb-4 text-white">Contact Us</h3>
           <p className="text-sm mb-2">US Toll Free: (774) 225-0882</p>
           <p className="text-sm mb-2">Fax: (774) 225-0882</p>
-          <p className="text-sm mb-2">E-Mail: Info@rtsautoparts.com</p>
-          <p className="text-sm mb-2">Website: autoparts.us</p>
+          <p className="text-sm mb-2">
+            E-Mail:{" "}
+            <a
+              href="mailto:Info@rtsautoparts.com"
+              className="hover:text-yellow-400"
+            >
+              Info@rtsautoparts.com
+            </a>
+          </p>
+          <p className="text-sm mb-2">
+            Website:{" "}
+            <a
+              href="https://autoparts.us"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-yellow-400"
+            >
+              autoparts.us
+            </a>
+          </p>
           <p className="text-sm mb-4">
-            Location: 11 Apex Dr Ste 300 A, Marlborough, MA 01752, USA
+            Location: 10127 Alameda St Los Angeles, CA 90002, USA
           </p>
 
           {/* Social Icons */}
           <div className="flex gap-4 mt-2">
-            <Facebook className="w-5 h-5 hover:text-yellow-400 cursor-pointer transition-colors duration-200" />
-            <Instagram className="w-5 h-5 hover:text-yellow-400 cursor-pointer transition-colors duration-200" />
-            <Twitter className="w-5 h-5 hover:text-yellow-400 cursor-pointer transition-colors duration-200" />
-            <Linkedin className="w-5 h-5 hover:text-yellow-400 cursor-pointer transition-colors duration-200" />
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <Facebook className="w-5 h-5 hover:text-yellow-400 cursor-pointer transition-colors duration-200" />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <Instagram className="w-5 h-5 hover:text-yellow-400 cursor-pointer transition-colors duration-200" />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <Twitter className="w-5 h-5 hover:text-yellow-400 cursor-pointer transition-colors duration-200" />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <Linkedin className="w-5 h-5 hover:text-yellow-400 cursor-pointer transition-colors duration-200" />
+            </a>
           </div>
         </div>
       </div>
