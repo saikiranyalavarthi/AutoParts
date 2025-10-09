@@ -10,12 +10,30 @@ const images = [Hero1, Hero2, Hero3, Hero4];
 const makes = [
   "Toyota", "Honda", "Ford", "Chevrolet", "BMW",
   "Mercedes", "Audi", "Hyundai", "Kia", "Nissan",
+  "Volkswagen", "Lexus", "Mazda", "Subaru", "Jeep",
+  "Dodge", "GMC", "Cadillac", "Acura", "Infiniti",
+  "Mitsubishi", "Chrysler", "Buick", "Tesla", "Volvo",
+  "Jaguar", "Land Rover", "Porsche", "Fiat", "Mini",
+  "Alfa Romeo", "Ram", "Genesis", "Lincoln", "Suzuki",
+  "Peugeot", "Renault", "Seat", "Skoda", "Bentley",
+  "Maserati", "Ferrari", "Lamborghini", "Rolls-Royce", "Aston Martin"
 ];
 
 const models = [
   "Corolla", "Civic", "Mustang", "Camry", "Accord",
   "X5", "A4", "Elantra", "Soul", "Altima",
+  "Silverado", "Tahoe", "F-150", "Malibu", "Explorer",
+  "Escape", "CR-V", "Rav4", "Santa Fe", "Sorento",
+  "Sentra", "Jetta", "Passat", "Golf", "Fusion",
+  "Impala", "Charger", "Challenger", "Wrangler", "Grand Cherokee",
+  "CX-5", "CX-9", "Outback", "Forester", "Legacy",
+  "G80", "G70", "RX", "NX", "Q50",
+  "Q60", "X3", "X1", "A6", "A3",
+  "S-Class", "E-Class", "C-Class", "Tucson", "Kona",
+  "Venza", "Model S", "Model 3", "Model X", "Model Y",
+  "F-Pace", "Range Rover", "Cayenne", "911", "Panamera"
 ];
+
 
 const parts = [
   "Used Engines", "Used Transmissions", "Transfer Case", "Rear Axle",
