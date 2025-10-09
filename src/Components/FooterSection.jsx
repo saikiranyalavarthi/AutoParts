@@ -33,9 +33,9 @@ export default function FooterSection() {
           </h3>
           <ul className="space-y-2">
             {[
-              { name: "Used Engines", href: "/parts/engines" },
-              { name: "Used Transmissions", href: "/parts/transmissions" },
-              { name: "OEM Used Auto Parts", href: "/parts/oem" },
+              { name: "Used Engines", href: "engines" },
+              { name: "Used Transmissions", href: "Transmission" },
+             
             ].map((item, idx) => (
               <li key={idx}>
                 <a
@@ -61,7 +61,7 @@ export default function FooterSection() {
              
               { name: "Testimonials", href: "/testimonials" },
               { name: "About", href: "/about" },
-              { name: "Blogs", href: "/blogs" },
+     
             ].map((res, idx) => (
               <li key={idx}>
                 <a
@@ -83,21 +83,21 @@ export default function FooterSection() {
           <p className="text-sm mb-2">
             E-Mail:{" "}
             <a
-              href="mailto:Info@rtsautoparts.com"
+              href="mailto:Info@Zentro.com"
               className="hover:text-yellow-400"
             >
-              Info@rtsautoparts.com
+              Info@Zentro.com
             </a>
           </p>
           <p className="text-sm mb-2">
             Website:{" "}
             <a
-              href="https://autoparts.us"
+              href="https://Zentro.us"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-yellow-400"
             >
-              autoparts.us
+             Zentro.us
             </a>
           </p>
           <p className="text-sm mb-4">
@@ -123,7 +123,7 @@ export default function FooterSection() {
       </div>
 
       <div className="text-center text-gray-500 mt-10 text-sm">
-        &copy; {new Date().getFullYear()} Auto Parts. All rights reserved.
+        &copy; {new Date().getFullYear()} Zentro. All rights reserved.
       </div>
     </footer>
   );
